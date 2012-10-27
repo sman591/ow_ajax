@@ -1,0 +1,1 @@
+Handles browser requests sent through jQuery/AJAX.
