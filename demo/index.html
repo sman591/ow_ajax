@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Demo - ow_ajax</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet"><!-- Bootstrap (demo only) -->
+    
+  </head>
+
+  <body>
+
+    <div class="container-fluid">
+		
+		<div class="well">
+		
+			<h1>ow_ajax</h1>
+			<h3><i>Demo</i></h2>
+			
+		</div>
+		
+		<p><a href="#" onclick="demo()" class="btn btn-primary"><i class="icon-arrow-right icon-white"></i> &nbsp;Go</a>&nbsp;&nbsp;<a href="#" onclick="demo_reset()" class="btn"><i class="icon-repeat"></i> &nbsp;Reset</a></p>
+		
+		<br>
+		
+		<div id="return" class="well">
+		
+			<p><i>Return content will show here...</i></p>
+		
+		</div>
+
+    </div>
+
+    <script src="jquery-1.8.2.min.js"></script><!-- jQuery (required) -->
+    <script src="bootstrap/js/bootstrap.min.js"></script><!-- Bootstrap (demo only) -->
+    
+    <script src="ow_loading_notice.js"></script><!-- ow_loading_notice (required) -->
+    <script src="../ow_ajax.js"></script><!-- ow_ajax (required) -->
+    
+    <script>
+    
+    	function demo() {
+	    	
+	    	ow_ajax('./return.json', {}, function(data){
+	    	
+		    	$('#return').html(data);
+		    	
+		    	
+	    	}, function(){}, {});
+	    	
+    	}
+    	
+    	function demo_reset() {
+	    	
+	    	$('#return').html('<p><i>Return content will show here...</i></p>');
+	    	
+    	}
+    
+    </script>
+
+  </body>
+</html>
