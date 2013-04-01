@@ -97,8 +97,6 @@ function ow_ajax_handler(type, act, alert_id) {
 	
 		case 'error':
 			
-			modal_handler('loader', 'hide', modalid);
-			
 			$(alertid+' .alert-heading').html('Error');
 			
 			if (act==='reset') {
